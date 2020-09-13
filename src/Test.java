@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class Test {
 	public static void main(String[] args) {
-		DungeonGenerator dungeon = new DungeonGenerator(86, 4);
+		DungeonGenerator dungeon = new DungeonGenerator(86, 7);
 		dungeon.generateDungeon();
 		
 		JFrame frame = new JFrame();
