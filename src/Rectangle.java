@@ -1,3 +1,4 @@
+//Simple data type representing the characteristics of simple rectangles
 
 public class Rectangle {
 	private int x, y, width, height;
@@ -8,8 +9,11 @@ public class Rectangle {
 		this.y = y;
 		this.width = width;
 		this.height = height;
-		center = new Point(x + width / 2, y + height / 2);
+		
+		center = new Point(x + width / 2, y + height / 2); //Type contains static coordinates
 	}
+	
+	//Helper methods
 	
 	public int getX() {
 		return x;
