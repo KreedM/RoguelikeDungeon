@@ -67,12 +67,12 @@ public class DungeonGenerator {
 		    if (leaf.getLeft() == null && leaf.getRight() == null) {
 		    	Rectangle container = leaf.getContainer();
 		    	
-		        int roomW = (int) (container.width * Rectangle.randomRange(0.5f, 0.8f));
+		        int roomW = (int) (container.width * Rectangle.randomRange(0.6f, 0.8f));
 		       
 		        if (roomW % 2 == 1)
 					roomW++;
 		        
-		        int roomH = (int) (container.height * Rectangle.randomRange(0.5f, 0.8f));
+		        int roomH = (int) (container.height * Rectangle.randomRange(0.6f, 0.8f));
 		        
 		        if (roomH % 2 == 1)
 					roomH++;
