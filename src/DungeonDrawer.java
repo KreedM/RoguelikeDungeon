@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 public class DungeonDrawer extends JPanel {
-	
+	private static final long serialVersionUID = 1L;
 	private final int tileSize = 8;
 	private int size;
 	private ArrayList<Rectangle> containers, rooms;
@@ -43,7 +43,7 @@ public class DungeonDrawer extends JPanel {
 		g.setColor(Color.GREEN);
 		
 		for (Rectangle container : containers)
-			g.drawRect(container.x * tileSize, container.y * tileSize, container.width * tileSize - 1, container.height * tileSize - 1);
+			g.drawRect(container.getX() * tileSize, container.getY() * tileSize, container.getWidth() * tileSize - 1, container.getHeight() * tileSize - 1);
 		
 		g.setColor(Color.LIGHT_GRAY);
 		
@@ -57,7 +57,7 @@ public class DungeonDrawer extends JPanel {
 		g.setColor(Color.DARK_GRAY);
 		
 		for (Rectangle room : rooms)
-			g.fillRect(room.x * tileSize, room.y * tileSize, room.width * tileSize, room.height * tileSize);
+			g.fillRect(room.getX() * tileSize, room.getY() * tileSize, room.getWidth() * tileSize, room.getHeight() * tileSize);
 		
 	}
 }

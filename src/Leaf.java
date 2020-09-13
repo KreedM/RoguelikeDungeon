@@ -11,10 +11,10 @@ public class Leaf {
 	public static Leaf splitLeaves(int iterations, Rectangle container) {
 		Leaf leaf = new Leaf(container);
 
-		if (iterations == 0 || container.width <= DungeonGenerator.MIN_ROOM_SIZE || container.height <= DungeonGenerator.MIN_ROOM_SIZE) 
+		if (iterations == 0 || container.getWidth() <= DungeonGenerator.MIN_ROOM_SIZE || container.getHeight() <= DungeonGenerator.MIN_ROOM_SIZE) 
 			return leaf;
 		
-		Rectangle[] splitContainers = Rectangle.splitRectangles(container);
+		Rectangle[] splitContainers = DungeonGenerator.splitRectangles(container);
 		
 		leaf.left = splitLeaves(iterations - 1, splitContainers[0]);
 		leaf.right = splitLeaves(iterations - 1, splitContainers[1]);
