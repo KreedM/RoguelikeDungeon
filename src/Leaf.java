@@ -10,9 +10,7 @@ public class Leaf {
 	
 	public static Leaf splitLeaves(int iterations, Rectangle container) {
 		Leaf leaf = new Leaf(container);
-		
-		System.out.println("" + container.width + " " + container.height);
-		
+
 		if (iterations == 0 || container.width <= DungeonGenerator.MIN_ROOM_SIZE || container.height <= DungeonGenerator.MIN_ROOM_SIZE) 
 			return leaf;
 		
