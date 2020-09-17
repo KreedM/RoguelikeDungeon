@@ -23,8 +23,8 @@ public class DungeonDrawer extends JPanel {
 		this.corridors = corridors;
 		
 		for (Leaf leaf : leaves) {
-			containers.add(leaf.getContainer());
-			rooms.add(leaf.getRoom());
+			containers.add(leaf.container);
+			rooms.add(leaf.room);
 		}
 		setBackground(Color.BLACK);
 	}
@@ -60,7 +60,7 @@ public class DungeonDrawer extends JPanel {
 		g.setColor(Color.DARK_GRAY);
 		
 		for (Rectangle room : rooms)
-			g.fillRect(room.getX() * tileSize, room.getY() * tileSize, room.getWidth() * tileSize, room.getHeight() * tileSize);
+			g.fillRect(room.x * tileSize, room.y * tileSize, room.width * tileSize, room.height * tileSize);
 		
 	}
 }

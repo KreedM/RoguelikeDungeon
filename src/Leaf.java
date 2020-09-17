@@ -3,8 +3,8 @@ import java.util.ArrayList;
 //Data type representing a leaf in a BSP tree
 
 public class Leaf {
-	private Leaf left, right;
-	private Rectangle container, room;
+	public Leaf left, right;
+	public Rectangle container, room;
 	
 	public Leaf(Rectangle container) {
 		this.container = container;
@@ -14,7 +14,7 @@ public class Leaf {
 		Leaf leaf = new Leaf(container);
 
 		//Prevents splitting if size is already too small
-		if (iterations == 0 || container.getWidth() <= DungeonGenerator.getMinRoomSize() || container.getHeight() <= DungeonGenerator.getMinRoomSize()) 
+		if (iterations == 0 || container.width <= DungeonGenerator.MIN_ROOM_SIZE || container.height <= DungeonGenerator.MIN_ROOM_SIZE) 
 			return leaf;
 		
 		Rectangle[] splitContainers = DungeonGenerator.splitRectangles(container);
@@ -32,27 +32,5 @@ public class Leaf {
 			left.addLeaf(leaves);
 			right.addLeaf(leaves);
 		}	
-	}
-	
-	//Helper methods
-	
-	public Leaf getLeft() {
-		return left;
-	}
-	
-	public Leaf getRight() {
-		return right;
-	}
-	
-	public Rectangle getContainer() {
-		return container;
-	}
-	
-	public void setRoom(Rectangle room) {
-		this.room = room;
-	}
-	
-	public Rectangle getRoom() {
-		return room;
 	}
 }
